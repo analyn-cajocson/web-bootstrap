@@ -6,6 +6,7 @@
 <title>Tasks</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<meta name="_token" content="{{ csrf_token() }}" />
 </head>
 <body>
 
@@ -21,10 +22,11 @@
   </div>
 </nav>
 
+@yield('content')
 
-<div class="container">
-    @yield('content')
-</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+
 
 
 </body>
